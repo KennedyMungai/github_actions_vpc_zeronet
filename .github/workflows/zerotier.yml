@@ -1,0 +1,13 @@
+name: ZeroTier VPC Workflow
+
+on:
+    push:
+        branches: main
+    workflow_dispatch:
+
+jobs:
+    zerotier:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Install ZeroTier install
+              run: curl -s https://install.zerotier.com | sudo bash
